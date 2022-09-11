@@ -97,6 +97,7 @@ microphone.onclick = ()=>{
 		"multiplied by":'*',
 		"divide":'/',
 		"divided":'/',
+		"by":'/',
 		"divide by":'/',
 		"divided by":'/',
 
