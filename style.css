@@ -1,0 +1,146 @@
+body{
+	font-family: 'Open Sans',sans-serif;
+	background-color: black;
+}
+#container{
+	width: 80%;
+	margin:auto;
+	height: 550px;
+	margin-top: 5%;
+}
+#calculator{
+	width: 320px;
+	height: 520px;
+	background-color: #eaedef;
+	margin: 0 auto;
+	top: 20px;
+	position: relative;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#result{
+	height: 120px;
+}
+#history{
+	text-align: right;
+	height: 20px;
+	margin: 0 20px;
+	padding-top: 20px;
+	font-size: 15px;
+	color: #919191;
+}
+#output{
+	text-align: right;
+	height: 60px;
+	margin: 10px 20px;
+	font-size: 30px;
+}
+#output-text{
+    height:120px;
+    width:250px;
+    float:left;
+}
+#microphone{
+    height:30px;
+    width:30px;
+    float:right;
+    background-color: rgb(224, 20, 20);
+
+    border-radius: 50%;
+    margin:20px;
+    margin-top: 45px;
+
+	color: white;
+	font-size: 10px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.record{
+    animation: microphone-animation 1.5s infinite ;
+}
+
+@keyframes microphone-animation {
+    0%{
+        transform: scale(0.92);
+    }
+    50%{
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(255, 30, 30, 0.5);
+    }
+    100%{
+        transform: scale(0.92);
+        box-shadow: 0 0 0 0 rgba(255, 30, 30, 0.5);
+    }
+}
+.tooltip{
+    width:200px;
+	font-size: 9px;
+	position :absolute;
+	background-color: rgb(236, 230, 218);
+	padding:10px;
+	top:45px;
+	transform: translateX(50px);
+	border-radius: 4px;
+
+	visibility: hidden;
+}
+.tooltip::before{
+	content: '';
+	position: absolute;
+	height:10px;
+	width:10px;
+	background-color: rgb(236, 230, 218);
+	transform:translateX(-15px) rotate(45deg);
+
+	visibility:hidden;
+}
+#output-microphone:hover .tooltip , #output-microphone:hover .tooltip::before {
+	visibility: visible;
+}
+#keyboard{
+	height: 400px;
+}
+.operator, .number, .empty{
+	width: 50px;
+	height: 50px;
+	margin: 15px;
+	float: left;
+	border-radius: 50%;
+	border-width: 0;
+	font-weight: bold;
+	font-size: 15px;
+}
+.number, .empty{
+	background-color: #eaedef;
+}
+.number, .operator{
+	cursor: pointer;
+}
+.operator:active, .number:active{
+	font-size: 13px;
+}
+.operator:focus, .number:focus, .empty:focus{
+	outline: 0;
+}
+button:nth-child(4){
+	font-size: 20px;
+	background-color: #20b2aa;
+}
+button:nth-child(8){
+	font-size: 20px;
+	background-color: #ffa500;
+}
+button:nth-child(12){
+	font-size: 20px;
+	background-color: #f08080;
+}
+button:nth-child(16){
+	font-size: 20px;
+	background-color: #7d93e0;
+}
+button:nth-child(20){
+	font-size: 20px;
+	background-color: #9477af;
+}
